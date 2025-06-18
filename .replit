@@ -1,1 +1,12 @@
 run = "go run ."
+modules = ["go-1.21", "nix"]
+
+[deployment]
+run = ["sh", "-c", "go run ."]
+
+[nix]
+channel = "stable-24_05"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
